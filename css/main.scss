@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;900&display=swap");
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Inter";
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.nav-container {
+  background: #006370;
+  a {
+    color: white;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
+
+  img {
+    width: 15px;
+    margin-left: 1.5em;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      a {
+        padding: 0 1em;
+      }
+    }
+  }
+}
+
+section {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.social-header,
+.hero-design {
+  display: none;
+}
+
+.hero {
+  background: #c2dfe1;
+  color: black;
+  display: grid;
+  text-align: center;
+  padding: 2em;
+  overflow: hidden;
+  position: relative;
+  .vid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.2;
+  }
+
+  .content {
+    color: #ef9a9e;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 2em;
+  }
+
+  .contact {
+    z-index: 5;
+    button {
+      background: #ef9a9e;
+      margin: 0;
+      padding: 0.5em 1em;
+      border: 1px solid white;
+      opacity: 0.9;
+      border-radius: 500px;
+      text-transform: uppercase;
+      color: white;
+      z-index: 10;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #006370;
+      transition: 0.5s;
+    }
+  }
+}
+
+.meet {
+  margin: 0 auto;
+  margin-top: -0.5em;
+  width: 300px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #006370;
+  letter-spacing: 0.4em;
+  font-size: 0.9em;
+}
+.subtitle--2 {
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+}
+
+.featured-title {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: -0.5em;
+  display: block;
+}
+
+.featured-desc {
+  color: #1b1b1b;
+  margin-bottom: 3em;
+  margin-top: 1.2em;
+  line-height: 1.8em;
+  font-weight: lighter;
+}
+
+.right {
+  overflow: hidden;
+  width: 100%;
+}
