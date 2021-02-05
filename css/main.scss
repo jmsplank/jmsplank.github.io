@@ -138,5 +138,36 @@ section {
 
 .right {
   overflow: hidden;
-  width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  .hero {
+    max-height: 1000px;
+    height: 70vh;
+  }
+
+  .work {
+    display: flex;
+  }
+  .left {
+    flex: 1 1 auto;
+  }
+  .right {
+    flex: 1 1 auto;
+    max-width: 50%;
+    max-height: 20em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 50%;
+    .vid {
+      left: 50%;
+      top: auto;
+      bottom: 0;
+      right: 0;
+    }
+  }
 }

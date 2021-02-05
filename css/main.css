@@ -151,6 +151,44 @@ section {
 
 .right {
   overflow: hidden;
-  width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  .hero {
+    max-height: 1000px;
+    height: 70vh;
+  }
+  .work {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: 50%;
+    max-height: 20em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .hero {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50%;
+        grid-template-columns: 50%;
+  }
+  .hero .vid {
+    left: 50%;
+    top: auto;
+    bottom: 0;
+    right: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
