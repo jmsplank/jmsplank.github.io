@@ -58,6 +58,10 @@ section {
   display: none;
 }
 
+.title {
+  display: grid;
+}
+
 .hero {
   background: #c2dfe1;
   color: black;
@@ -66,19 +70,25 @@ section {
   padding: 2em;
   overflow: hidden;
   position: relative;
+  display: grid;
+  align-content: center;
   .vid {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 2;
     opacity: 0.2;
+  }
+  .cover {
+    display: none;
   }
 
   .content {
     color: #ef9a9e;
     text-transform: uppercase;
     letter-spacing: 0.5em;
-    font-size: 2em;
+    font-size: 1.5em;
+    z-index: 0;
   }
 
   .contact {
@@ -143,7 +153,10 @@ section {
 @media only screen and (min-width: 800px) {
   .hero {
     max-height: 1000px;
-    height: 70vh;
+    height: 60vh;
+    .content {
+      font-size: 4em;
+    }
   }
 
   .work {
@@ -161,13 +174,41 @@ section {
 
 @media only screen and (min-width: 1000px) {
   .hero {
-    display: grid;
     grid-template-columns: 50%;
-    .vid {
-      left: 50%;
-      top: auto;
+    .vid,
+    .cover {
+      left: 30%;
+      width: 70%;
       bottom: 0;
       right: 0;
+    }
+    .vid {
+      top: auto;
+      z-index: 0;
+    }
+    .cover {
+      display: initial;
+      position: absolute;
+      top: 0;
+      content: "";
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(90deg, #c2dfe1 0%, #c2dfe100 40%);
+      // border: 10px solid black;
+      z-index: 1;
+    }
+    .content {
+      z-index: 5;
+      font-size: 3em;
+    }
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  .hero {
+    grid-template-columns: 70%;
+    .content {
+      font-size: 5em;
     }
   }
 }

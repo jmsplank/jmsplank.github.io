@@ -65,6 +65,11 @@ section {
   display: none;
 }
 
+.title {
+  display: -ms-grid;
+  display: grid;
+}
+
 .hero {
   background: #c2dfe1;
   color: black;
@@ -74,21 +79,29 @@ section {
   padding: 2em;
   overflow: hidden;
   position: relative;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .hero .vid {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 2;
   opacity: 0.2;
+}
+
+.hero .cover {
+  display: none;
 }
 
 .hero .content {
   color: #ef9a9e;
   text-transform: uppercase;
   letter-spacing: 0.5em;
-  font-size: 2em;
+  font-size: 1.5em;
+  z-index: 0;
 }
 
 .hero .contact {
@@ -156,7 +169,10 @@ section {
 @media only screen and (min-width: 800px) {
   .hero {
     max-height: 1000px;
-    height: 70vh;
+    height: 60vh;
+  }
+  .hero .content {
+    font-size: 4em;
   }
   .work {
     display: -webkit-box;
@@ -179,16 +195,44 @@ section {
 
 @media only screen and (min-width: 1000px) {
   .hero {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 50%;
         grid-template-columns: 50%;
   }
-  .hero .vid {
-    left: 50%;
-    top: auto;
+  .hero .vid,
+  .hero .cover {
+    left: 30%;
+    width: 70%;
     bottom: 0;
     right: 0;
+  }
+  .hero .vid {
+    top: auto;
+    z-index: 0;
+  }
+  .hero .cover {
+    display: initial;
+    position: absolute;
+    top: 0;
+    content: "";
+    margin: 0;
+    padding: 0;
+    background-image: -webkit-gradient(linear, left top, right top, from(#c2dfe1), color-stop(40%, #c2dfe100));
+    background-image: linear-gradient(90deg, #c2dfe1 0%, #c2dfe100 40%);
+    z-index: 1;
+  }
+  .hero .content {
+    z-index: 5;
+    font-size: 3em;
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  .hero {
+    -ms-grid-columns: 70%;
+        grid-template-columns: 70%;
+  }
+  .hero .content {
+    font-size: 5em;
   }
 }
 /*# sourceMappingURL=main.css.map */
