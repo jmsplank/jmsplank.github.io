@@ -8,12 +8,12 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="281.29776mm"
-   height="281.29776mm"
-   viewBox="0 0 281.29776 281.29776"
+   width="280.2442mm"
+   height="280.2442mm"
+   viewBox="0 0 280.2442 280.2442"
    version="1.1"
    id="svg8"
-   sodipodi:docname="phd.svg"
+   sodipodi:docname="mphys.svg"
    inkscape:version="1.0.2 (1.0.2+r75+1)">
   <defs
      id="defs2">
@@ -31,10 +31,10 @@
     </linearGradient>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 175.27501 : 1"
-       inkscape:vp_y="-1.8369702e-13 : 1000 : 0"
-       inkscape:vp_z="614.56812 : 175.27501 : 1"
-       inkscape:persp3d-origin="307.28406 : 139.93409 : 1"
+       inkscape:vp_x="0 : 174.22145 : 1"
+       inkscape:vp_y="-1.8369702e-13 : 999.99998 : 0"
+       inkscape:vp_z="614.56811 : 174.22145 : 1"
+       inkscape:persp3d-origin="307.28405 : 138.88053 : 1"
        id="perspective2166" />
     <linearGradient
        inkscape:collect="always"
@@ -336,17 +336,6 @@
        fx="-115.84729"
        fy="98.615143"
        r="412.96899" />
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath2339">
-      <rect
-         style="opacity:0.999;fill:#686868;fill-opacity:0.62896;stroke:none;stroke-width:2.165;stroke-miterlimit:4;stroke-dasharray:8.66, 4.33001;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect2341"
-         width="281.29776"
-         height="281.29776"
-         x="-189.72594"
-         y="426.73328" />
-    </clipPath>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient1808"
@@ -367,6 +356,17 @@
        y1="87.455345"
        x2="100.24882"
        y2="76.995293" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1606">
+      <rect
+         style="fill:#cb6969;fill-opacity:0.654411;stroke-width:2.64191"
+         id="rect1608"
+         width="280.2442"
+         height="280.2442"
+         x="-189.72594"
+         y="426.73328" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -376,8 +376,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35355339"
-     inkscape:cx="1023.2734"
-     inkscape:cy="459.33441"
+     inkscape:cx="361.42144"
+     inkscape:cy="459.33442"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -387,7 +387,7 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:snap-nodes="false" />
+     inkscape:snap-nodes="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -396,7 +396,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -541,7 +541,7 @@
     </g>
     <g
        id="g2337"
-       clip-path="url(#clipPath2339)">
+       clip-path="url(#clipPath1606)">
       <ellipse
          style="opacity:0.999;fill:url(#radialGradient2304);fill-opacity:1;stroke:none;stroke-width:2.75413;stroke-miterlimit:4;stroke-dasharray:5.50826, 11.0165;stroke-dashoffset:0;stroke-opacity:1"
          id="ellipse2236"

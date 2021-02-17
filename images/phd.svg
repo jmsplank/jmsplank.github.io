@@ -8,9 +8,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="614.56812mm"
-   height="212.04552mm"
-   viewBox="0 0 614.56812 212.04552"
+   width="400.68613mm"
+   height="400.68613mm"
+   viewBox="0 0 400.68612 400.68613"
    version="1.1"
    id="svg8"
    sodipodi:docname="phd.svg"
@@ -216,14 +216,14 @@
        r="105.54934" />
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath1780">
+       id="clipPath2239">
       <rect
-         style="opacity:0.999;fill:#cb6969;fill-opacity:0.654411;stroke:none;stroke-width:2.26297;stroke-miterlimit:4;stroke-dasharray:4.52594, 9.05188;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect1782"
-         width="522.44537"
-         height="180.2603"
-         x="-161.66283"
-         y="27.983141" />
+         style="fill:#cb6969;fill-opacity:0.654411;stroke-width:1.41542"
+         id="rect2241"
+         width="340.62399"
+         height="340.62399"
+         x="-159.81976"
+         y="-56.351017" />
     </clipPath>
   </defs>
   <sodipodi:namedview
@@ -234,8 +234,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.25"
-     inkscape:cx="891.78396"
-     inkscape:cy="69.617286"
+     inkscape:cx="925.63278"
+     inkscape:cy="793.05527"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -244,24 +244,7 @@
      inkscape:window-height="1056"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="0">
-    <sodipodi:guide
-       position="0,212.04552"
-       orientation="0,2322.7771"
-       id="guide1756" />
-    <sodipodi:guide
-       position="614.56812,212.04552"
-       orientation="801.43188,0"
-       id="guide1758" />
-    <sodipodi:guide
-       position="614.56812,0"
-       orientation="0,-2322.7771"
-       id="guide1760" />
-    <sodipodi:guide
-       position="0,0"
-       orientation="-801.43188,0"
-       id="guide1762" />
-  </sodipodi:namedview>
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -270,7 +253,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -278,7 +261,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(299.41398,-456.90325)">
+     transform="translate(327.8779,-357.69849)">
     <ellipse
        style="opacity:0.999;fill:url(#radialGradient951);fill-opacity:1;stroke:none;stroke-width:2.75413;stroke-miterlimit:4;stroke-dasharray:5.50826, 11.0165;stroke-dashoffset:0;stroke-opacity:1"
        id="path941"
@@ -345,8 +328,8 @@
        transform="translate(-3.0372562,3.8370789)" />
     <g
        id="g1748"
-       transform="matrix(1.1763297,0,0,1.1763297,-109.24519,423.98586)"
-       clip-path="url(#clipPath1780)">
+       transform="matrix(1.1763297,0,0,1.1763297,-139.87717,423.98586)"
+       clip-path="url(#clipPath2239)">
       <ellipse
          style="opacity:0.999;fill:url(#radialGradient1750);fill-opacity:1;stroke:none;stroke-width:2.75413;stroke-miterlimit:4;stroke-dasharray:5.50826, 11.0165;stroke-dashoffset:0;stroke-opacity:1"
          id="ellipse1715"

@@ -148,6 +148,53 @@ section {
 
 .right {
   overflow: hidden;
+  border: 1px solid gray;
+  max-width: 75%;
+}
+
+.TRA-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TRA-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .TRA-img {
+    flex: 1;
+    max-width: 50%;
+  }
+  .TRA-desc {
+    font-weight: lighter;
+    flex: 2;
+    align-self: center;
+  }
+}
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  .skill {
+    max-width: 6em;
+    padding: 10px;
+    .skill-desc {
+      font-weight: lighter;
+    }
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .TRA-info-container {
+    flex-direction: row;
+    padding: 2em;
+    .TRA-desc {
+      margin: 1em;
+    }
+  }
 }
 
 @media only screen and (min-width: 800px) {
@@ -157,18 +204,20 @@ section {
     .content {
       font-size: 4em;
     }
+    .contact {
+      margin-top: -3.5em;
+    }
   }
 
-  .work {
+  .work-all {
     display: flex;
   }
-  .left {
-    flex: 1 1 auto;
+  .work {
+    flex: 1;
+    // display: flex;
   }
-  .right {
-    flex: 1 1 auto;
-    max-width: 50%;
-    max-height: 20em;
+  .left {
+    min-height: 300px;
   }
 }
 

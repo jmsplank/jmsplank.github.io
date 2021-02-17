@@ -1,106 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>James Plank</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
     <div class="nav-container">
-        <header>
-            <a href="index.html" class="logo"><img src="images/Logo.svg" alt="JP logo"/></a>
-            <nav>
-                <ul>
-                    <li><a href="pages/work/work.html">Work</a></li>
-                    <li><a href="pages/skills/skills.html">Skills</a></li>
-                    <li><a href="pages/contact/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="social-header">
-            <ul>
-                <li><img src="#" alt="LinkedIn"></li>
-                <li><img src="#" alt="Twitter"></li>
-            </ul>
-        </div>
+      <header>
+        <a href="index.html" class="logo"
+          ><img src="images/Logo.svg" alt="JP logo"
+        /></a>
+        <nav>
+          <ul>
+            <li><a href="pages/work/work.html">Work</a></li>
+            <li><a href="pages/skills/skills.html">Skills</a></li>
+            <li><a href="pages/contact/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="social-header">
+        <ul>
+          <li><img src="#" alt="LinkedIn" /></li>
+          <li><img src="#" alt="Twitter" /></li>
+        </ul>
+      </div>
     </div>
 
     <div class="hero">
-        <video class="vid" playsinline autoplay muted loop>
-            <source src="images/turb.webm" type="video/webm">
-        </video>
-        <div class="cover"></div>
-        <div class="title">
-            <div class="content">
-                <h1>James Plank</h1>
-            </div>
-            <div class="contact">
-                <button >Get in touch</button>
-            </div>
+      <video class="vid" playsinline autoplay muted loop>
+        <source src="images/turb.webm" type="video/webm" />
+      </video>
+      <div class="cover"></div>
+      <div class="title">
+        <div class="content">
+          <h1>James Plank</h1>
         </div>
+        <div class="contact">
+          <button>Get in touch</button>
+        </div>
+      </div>
     </div>
 
-    <section class="work current">
+    <div class="work-all">
+      <section class="work current">
         <div class="left">
-            <div class="inner transition2">
-                <p class="subtitle">Current Work</p>
-                <a href="pages/work/phd.html" class="featured-title">PhD Space Envrionment Physics</a>
-                <h2 class="subtitle subtitle--2">2020-2024</h2>
-                <div class="featured-desc">
-                    <p>
-                        Using MMS spacecraft data to study how turbulence is generated & propagated as charged particles from the Sun impact Earth's magnetic field.
-                    </p>
-                </div>
+          <div class="inner transition2">
+            <p class="subtitle">Current Work</p>
+            <a href="pages/work/phd.html" class="featured-title"
+              >PhD Space Envrionment Physics</a
+            >
+            <h2 class="subtitle subtitle--2">2020-2024</h2>
+            <div class="featured-desc">
+              <p>
+                Using MMS spacecraft data to study how turbulence is generated &
+                propagated as charged particles from the Sun impact Earth's
+                magnetic field.
+              </p>
             </div>
+          </div>
         </div>
-        <img src="images/phd.svg" alt="Current Work" class="right transition2">
-    </section>
+        <img
+          src="images/phd.svg"
+          alt="Current Work"
+          class="right transition2"
+        />
+      </section>
 
-    <section class="work past">
+      <section class="work past">
         <div class="left">
-            <div class="inner transition2">
-                <p class="subtitle">Previous Work</p>
-                <a href="pages/work/mphys.html" class="featured-title">Master's Thesis</a>
-                <h2 class="subtitle subtitle--2">2020</h2>
-                <div class="featured-desc">
-                    <p>Surveying high temperatures in the 'lobe' of Earth's magnetosphere. Looking for a link between tail reconnection during times of southward IMF and a type of high-latitude aurora known transpolar arcs.</p>
-                    <a href="https://github.com/jmsplank/MPHYS/raw/master/Final%20Report/PHYS6006-James%20Plank-Magnetospheric%20Structure%20Associated%20with%20High%20Latitude%20Aurora.pdf" download="">Read It</a>
-                    <br/>
-                    <a href="https://github.com/jmsplank/MPHYS">Source Code</a>
-                </div>
+          <div class="inner transition2">
+            <p class="subtitle">Previous Work</p>
+            <a href="pages/work/mphys.html" class="featured-title"
+              >Master's Thesis</a
+            >
+            <h2 class="subtitle subtitle--2">2020</h2>
+            <div class="featured-desc">
+              <p>
+                Surveying high temperatures in the 'lobe' of Earth's
+                magnetosphere. Looking for a link between tail reconnection
+                during times of southward IMF and a type of high-latitude aurora
+                known transpolar arcs.
+              </p>
+              <a
+                href="https://github.com/jmsplank/MPHYS/raw/master/Final%20Report/PHYS6006-James%20Plank-Magnetospheric%20Structure%20Associated%20with%20High%20Latitude%20Aurora.pdf"
+                download=""
+                >Read It</a
+              >
+              <br />
+              <a href="https://github.com/jmsplank/MPHYS">Source Code</a>
             </div>
+          </div>
         </div>
-        <img class="right transition2" src="images/mphys.svg" alt="Previous Work">
-    </section>
+        <img
+          class="right transition2"
+          src="images/mphys.svg"
+          alt="Previous Work"
+        />
+      </section>
+    </div>
 
-    <section class="skills">
-        <div class="skills-container">
-            <ul>
-                <li class="transition2">
-                    <div class="icon-container one">
-                        <img src="#" alt="Icon">
-                    </div>
-                    <p class="skill-title">Mad Science</p>
-                    <p class="featured-desc skill-desc">Lorem Ipsum Dolor Sit Amet</p>
-                </li>
-                <li class="transition2">
-                    <div class="icon-container two">
-                        <img src="#" alt="Icon">
-                    </div>
-                    <p class="skill-title">Frontend</p>
-                    <p class="featured-desc skill-desc">Lorem Ipsum Dolor Sit Amet</p>
-                </li>
-                <li class="transition2">
-                    <div class="icon-container three">
-                        <img src="#" alt="Icon">
-                    </div>
-                    <p class="skill-title">Design</p>
-                    <p class="featured-desc skill-desc">Lorem Ipsum Dolor Sit Amet</p>
-                </li>
-            </ul>
+    <div class="TRA-container">
+      <section class="TRA">
+        <div class="heading">
+          <p class="subtitle">Full Stack Developer</p>
+          <a
+            href="http://therunningalgorithm.com"
+            class="featured-title"
+            target="_blank"
+          >
+            The Running Algorithm
+          </a>
+          <h2 class="subtitle subtitle--2">Co-Founder & CTO</h2>
         </div>
-    </section>
-    
-</body>
+        <div class="TRA-info-container">
+          <div class="TRA-img">
+            <img src="images/Transparent_Circle_RA.svg" alt="TRA Logo" />
+          </div>
+          <div class="TRA-desc">
+            <p>
+              Training plans for runners, customised exactly to the needs and
+              abilities of the athlete, with a focus on boosting performance
+              without injury.
+            </p>
+          </div>
+        </div>
+        <div class="TRA-skills">
+          <p class="subtitle">Skills used</p>
+          <div class="skills-icons">
+            <div class="skill">
+              <h2 class="subtitle subtitle--2">Python</h2>
+              <img src="images/python.svg" alt="Python" class="skill-icon" />
+              <p class="skill-desc">Algorithm Code</p>
+            </div>
+            <div class="skill">
+              <h2 class="subtitle subtitle--2">Javascript</h2>
+              <img src="images/js.svg" alt="Javascript" class="skill-icon" />
+              <p class="skill-desc">Frontend & API</p>
+            </div>
+            <div class="skill">
+              <h2 class="subtitle subtitle--2">React.js</h2>
+              <img src="images/react.svg" alt="react" class="skill-icon" />
+              <p class="skill-desc">Frontend</p>
+            </div>
+            <div class="skill">
+              <h2 class="subtitle subtitle--2">Inkscape</h2>
+              <img
+                src="images/inkscape.svg"
+                alt="inkscape"
+                class="skill-icon"
+              />
+              <p class="skill-desc">Vector Design</p>
+            </div>
+            <div class="skill">
+              <h2 class="subtitle subtitle--2">CSS</h2>
+              <img src="images/CSS.svg" alt="react" class="skill-icon" />
+              <p class="skill-desc">Styling</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- <section class="skills">
+      <div class="skills-container">
+        <ul>
+          <li class="transition2">
+            <div class="icon-container one">
+              <img src="#" alt="Icon" />
+            </div>
+            <p class="skill-title">Mad Science</p>
+            <p class="featured-desc skill-desc">Lorem Ipsum Dolor Sit Amet</p>
+          </li>
+          <li class="transition2">
+            <div class="icon-container two">
+              <img src="#" alt="Icon" />
+            </div>
+            <p class="skill-title">Frontend</p>
+            <p class="featured-desc skill-desc">Lorem Ipsum Dolor Sit Amet</p>
+          </li>
+          <li class="transition2">
+            <div class="icon-container three">
+              <img src="#" alt="Icon" />
+            </div>
+            <p class="skill-title">Design</p>
+            <p class="featured-desc skill-desc">Lorem Ipsum Dolor Sit Amet</p>
+          </li>
+        </ul>
+      </div>
+    </section> -->
+  </body>
 </html>
