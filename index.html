@@ -5,29 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>James Plank</title>
     <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("components/header.html");
+        // $("#footer").load("footer.html");
+      });
+    </script>
   </head>
   <body>
-    <div class="nav-container">
-      <header>
-        <a href="index.html" class="logo"
-          ><img src="images/Logo.svg" alt="JP logo"
-        /></a>
-        <nav>
-          <ul>
-            <li><a href="pages/work/work.html">Work</a></li>
-            <li><a href="pages/skills/skills.html">Skills</a></li>
-            <li><a href="pages/contact/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="social-header">
-        <ul>
-          <li><img src="#" alt="LinkedIn" /></li>
-          <li><img src="#" alt="Twitter" /></li>
-        </ul>
-      </div>
-    </div>
-
+    <div class="" id="header"></div>
     <div class="hero">
       <video class="vid" playsinline autoplay muted loop>
         <source src="images/turb.webm" type="video/webm" />
@@ -37,74 +28,75 @@
         <div class="content">
           <h1>James Plank</h1>
         </div>
-        <div class="contact">
-          <button>Get in touch</button>
-        </div>
       </div>
     </div>
 
     <div class="work-all">
       <section class="work current">
-        <div class="left">
-          <div class="inner transition2">
-            <p class="subtitle">Current Work</p>
-            <a href="pages/work/phd.html" class="featured-title"
-              >PhD Space Envrionment Physics</a
-            >
-            <h2 class="subtitle subtitle--2">2020-2024</h2>
-            <div class="featured-desc">
-              <p>
-                Using MMS spacecraft data to study how turbulence is generated &
-                propagated as charged particles from the Sun impact Earth's
-                magnetic field.
-              </p>
+        <div class="card">
+          <div class="left">
+            <div class="inner transition2">
+              <p class="subtitle">Current Work</p>
+              <a href="pages/work/phd.html" class="featured-title"
+                >PhD Space Envrionment Physics</a
+              >
+              <h2 class="subtitle subtitle--2">2020-2024</h2>
+              <div class="featured-desc">
+                <p>
+                  Using MMS spacecraft data to study how turbulence is generated
+                  & propagated as charged particles from the Sun impact Earth's
+                  magnetic field.
+                </p>
+              </div>
             </div>
           </div>
+          <img
+            src="images/phd.svg"
+            alt="Current Work"
+            class="right transition2"
+          />
         </div>
-        <img
-          src="images/phd.svg"
-          alt="Current Work"
-          class="right transition2"
-        />
       </section>
 
       <section class="work past">
-        <div class="left">
-          <div class="inner transition2">
-            <p class="subtitle">Previous Work</p>
-            <a href="pages/work/mphys.html" class="featured-title"
-              >Master's Thesis</a
-            >
-            <h2 class="subtitle subtitle--2">2020</h2>
-            <div class="featured-desc">
-              <p>
-                Surveying high temperatures in the 'lobe' of Earth's
-                magnetosphere. Looking for a link between tail reconnection
-                during times of southward IMF and a type of high-latitude aurora
-                known transpolar arcs.
-              </p>
-              <a
-                href="https://github.com/jmsplank/MPHYS/raw/master/Final%20Report/PHYS6006-James%20Plank-Magnetospheric%20Structure%20Associated%20with%20High%20Latitude%20Aurora.pdf"
-                download=""
-                >Read It</a
+        <div class="card">
+          <div class="left">
+            <div class="inner transition2">
+              <p class="subtitle">Previous Work</p>
+              <a href="pages/work/mphys.html" class="featured-title"
+                >Master's Thesis</a
               >
-              <br />
-              <a href="https://github.com/jmsplank/MPHYS">Source Code</a>
+              <h2 class="subtitle subtitle--2">2020</h2>
+              <div class="featured-desc">
+                <p>
+                  Surveying high temperatures in the 'lobe' of Earth's
+                  magnetosphere. Looking for a link between tail reconnection
+                  during times of southward IMF and a type of high-latitude
+                  aurora known transpolar arcs.
+                </p>
+                <a
+                  href="https://github.com/jmsplank/MPHYS/raw/master/Final%20Report/PHYS6006-James%20Plank-Magnetospheric%20Structure%20Associated%20with%20High%20Latitude%20Aurora.pdf"
+                  download=""
+                  >Read It</a
+                >
+                <br />
+                <a href="https://github.com/jmsplank/MPHYS">Source Code</a>
+              </div>
             </div>
           </div>
+          <img
+            class="right transition2"
+            src="images/mphys.svg"
+            alt="Previous Work"
+          />
         </div>
-        <img
-          class="right transition2"
-          src="images/mphys.svg"
-          alt="Previous Work"
-        />
       </section>
     </div>
 
-    <div class="TRA-container">
-      <section class="TRA">
+    <section class="TRA-container">
+      <div class="TRA card">
         <div class="heading">
-          <p class="subtitle">Full Stack Developer</p>
+          <p class="subtitle">Full Stack Engineer</p>
           <a
             href="http://therunningalgorithm.com"
             class="featured-title"
@@ -116,7 +108,13 @@
         </div>
         <div class="TRA-info-container">
           <div class="TRA-img">
-            <img src="images/Transparent_Circle_RA.svg" alt="TRA Logo" />
+            <a href="http://therunningalgorithm.com" target="_blank">
+              <img
+                src="images/Transparent_Circle_RA.svg"
+                alt="TRA Logo"
+                href="http://therunningalgorithm.com"
+              />
+            </a>
           </div>
           <div class="TRA-desc">
             <p>
@@ -155,13 +153,18 @@
             </div>
             <div class="skill">
               <h2 class="subtitle subtitle--2">CSS</h2>
-              <img src="images/CSS.svg" alt="react" class="skill-icon" />
+              <img src="images/CSS.svg" alt="CSS" class="skill-icon" />
               <p class="skill-desc">Styling</p>
+            </div>
+            <div class="skill">
+              <h2 class="subtitle subtitle--2">SQL</h2>
+              <img src="images/SQL.svg" alt="SQL" class="skill-icon" />
+              <p class="skill-desc">Database Management</p>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
     <!-- <section class="skills">
       <div class="skills-container">
         <ul>
