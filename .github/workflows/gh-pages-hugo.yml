@@ -32,9 +32,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
       - name: Install Dependencies
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: 20.5.1
           cache: "npm"
@@ -42,7 +42,7 @@ jobs:
       - run: npm ci
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
@@ -50,7 +50,7 @@ jobs:
           HUGO_ENV: production
         run: npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: public/
 
@@ -64,4 +64,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
