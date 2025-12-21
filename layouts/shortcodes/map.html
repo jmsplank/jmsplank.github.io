@@ -1,0 +1,19 @@
+<div>
+    {{ $id := printf "map-%d" (now.UnixNano) }}
+    {{ $lat := .Get "lat" | default "78.223310" }}
+    {{ $lon := .Get "lon" | default "15.646715" }}
+    {{ $zoom := .Get "zoom" | default "13" }}
+    <div id="{{ $id }}" style="height: 400px;"></div>
+    <script>
+        (function () {
+            var lat = parseFloat("{{ $lat }}");
+            var lon = parseFloat("{{ $lon }}");
+            var zoom = parseFloat("{{ $zoom }}");
+            var map = L.map("{{ $id }}").setView([lat, lon], zoom);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+        })();
+    </script>
+</div>

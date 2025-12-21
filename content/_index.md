@@ -4,26 +4,18 @@ date = 2023-09-17T23:25:24+01:00
 draft = false
 +++
 
-<div class="col-md-6">
-<div class="alert alert-success" role="alert">
-<h2 class="alert-heading">Hire me</h2>
-<p>
-I will have a PhD in space plasma turbulence from <strong>July 2024</strong>.
-</p>
-    <div class="d-flex justify-content-evenly">
-        <a role="button" class="btn btn-success text-light" href="mailto:james@jamesplank.co.uk">Contact</a>
-        <a role="button" class="btn btn-primary text-light" href="/cv">CV</a>
-    </div>
-</div>
-</div>
-
 ## About
 
-I am a PhD student in the Space Environment Physics group, which is part of [Physics and Astronomy](https://www.astro.soton.ac.uk/people.html) at the [Univeristy of Southampton](https://www.southampton.ac.uk/people/5xhtym/mr-james-plank).
+I am a freelance software engineer specialising in research and development for both academia and industry. My main interests are in scientific computing, data analysis, and machine learning.
+
+I hold a PhD in plasma physics from the University of Southampton, and more recently I have worked as a Communications Engineer in the UK defence industry, designing novel processes for improving comms systems in challenging environments.
+
+## Location
+
+I am based in Longyearbyen, Svalbard. This is quite far north so I typically work on remote projects!
+
+{{< map lat="78.223310" lon="15.646715" zoom="7" >}}
 
 ## Contact
 
-The best way to reach me is via email:
-
 - Email (personal): [james@jamesplank.co.uk](mailto:james@jamesplank.co.uk)
-- Email (academic): [j.plank@soton.ac.uk](mailto:j.plank@soton.ac.uk)
