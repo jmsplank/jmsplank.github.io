@@ -1,0 +1,11 @@
+{{ $alt := .Text | default "" }}
+{{ $title := .Title | default $alt }}
+{{ $src := .Destination | safeURL }}
+{{ with .Page.Resources.GetMatch $src }}
+<figure>
+    {{ partial "_images/picture.html" (dict "src" . "alt" $alt "title" $title) }}
+    {{ with $alt }}<figcaption>
+        <p style="text-transform: uppercase; font-size: x-small;">{{- . -}}</p>
+    </figcaption>{{ end }}
+</figure>
+{{ end }}

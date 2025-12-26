@@ -1,0 +1,21 @@
+{{ $originalImage := .src }}
+{{ $class := .class }}
+{{ $lazy := .lazy | default true }}
+{{ $caption := .alt | default "" }}
+
+{{ $w := float $originalImage.Width }}
+{{ $h := float $originalImage.Height }}
+{{ $aspectRatio := div $w $h }}
+
+{{ $media_query_widths := slice 1400 1200 992 768 576 480 360}}
+
+<picture>
+    {{ range $media_query_widths }}
+    {{ $nw := . }}
+    {{ $nh := div $nw $aspectRatio | int }}
+    {{ $img_webp := $originalImage.Resize (printf "%dx%d webp q100" $nw $nh) }}
+    <source media="(min-width:{{$nw}}px)" srcset="{{ $img_webp.Permalink }}" type="image/webp">
+    {{end}}
+    <img {{with $lazy}} loading="lazy" class="img-fluid" data-src="{{$originalImage.RelPermalink}}" {{else}}
+        src="{{$originalImage.RelPermalink}}" {{end}} alt="{{ $caption }}">
+</picture>
