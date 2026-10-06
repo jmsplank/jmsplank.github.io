@@ -9,3 +9,5 @@ public/*
 .DS_Store
 
 .secrets
+
+hugo_stats.json

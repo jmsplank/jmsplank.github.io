@@ -5,12 +5,12 @@
 </head>
 
 <body>
-    <div class="container-fluid container-md">
+    <div class="mx-auto max-w-4xl px-4">
         {{ partial "header.html" . }}
-        <main class="row">
+        <main>
             {{ partial "r-list.html" . }}
         </main>
-        <footer class="row pt-5">
+        <footer class="pt-12">
             <hr>
             {{ partial "footer.html" . }}
         </footer>
@@ -21,9 +21,9 @@
 {{ define "partials/r-list.html" }}
 {{ partial "breadcrumb.html" . }}
 <h1>{{ .Title }}</h1>
-<ul class="list-group">
+<ul class="list-none p-0 divide-y divide-dark/20">
     {{ range .RegularPages }}
-    <li class="list-group-item">
+    <li class="py-2">
         <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
     </li>
     {{ end }}

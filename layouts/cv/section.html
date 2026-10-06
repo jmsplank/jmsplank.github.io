@@ -1,29 +1,29 @@
 {{ define "main" }}
-<div class="col col-xl-8 border-bottom">
-    <div class="d-none d-print-flex justify-content-center">
-        <div class="alert alert-info text-center">Please go to <a href="http://jamesplank.co.uk/cv"
-                class="alert-link">http://jamesplank.co.uk/cv</a> for a better view of this CV.</div>
+<div class="w-full xl:w-2/3 border-b border-dark/20">
+    <div class="hidden print:flex justify-center">
+        <div class="rounded border border-info/40 bg-info/10 p-3 text-center">Please go to <a href="http://jamesplank.co.uk/cv"
+                class="font-bold">http://jamesplank.co.uk/cv</a> for a better view of this CV.</div>
     </div>
-    <div class="row">
-        <div class="col-12 col-sm-4 order-1">
+    <div class="grid sm:grid-cols-3">
+        <div class="order-1">
         </div>
-        <div class="col-12 col-sm-4 text-center order-3 order-sm-2 pb-3">
+        <div class="text-center order-3 sm:order-2 pb-4">
             {{/* NAME */}}
-            <a class="h1 link-underline-light" href="/">James Plank</a>
-            <a class="d-none d-sm-block" href="http://jamesplank.co.uk">jamesplank.co.uk</a>
+            <a class="text-[2.5rem]" href="/">James Plank</a>
+            <a class="hidden sm:block" href="http://jamesplank.co.uk">jamesplank.co.uk</a>
         </div>
-        <div class="col-12 col-sm-4 order-2 order-sm-3">
+        <div class="order-2 sm:order-3">
             {{/* CONTACT */}}
-            <ul class="list-unstyled text-end">
+            <ul class="list-none p-0 text-right">
                 <li><a href="mailto:james@jamesplank.co.uk">james@jamesplank.co.uk</a></li>
                 <li><a href="https://orcid.org/0000-0001-8281-059X">ORCiD</a></li>
                 <li><a href="https://github.com/jmsplank">GitHub</a></li>
             </ul>
         </div>
     </div>
-    <div class="row">
+    <div class="grid sm:grid-cols-3">
         <!-- LEFT COL -->
-        <div class="col-12 col-sm-4 bg-dark text-light p-4">
+        <div class="bg-dark text-light p-6">
             <article>
                 <h2>Technical Skills</h2>
                 <p class="my-0">Skilled in:</p>
@@ -48,9 +48,9 @@
                     <li>Apache Groovy</li>
                 </ul>
             </article>
-            <article class="pt-4">
+            <article class="pt-6">
                 <h2>Education</h2>
-                <div class="my-4">
+                <div class="my-6">
                     <p class="my-0">2020-2024</p>
                     <p class="my-0">PhD Doctorate of Philosophy - Physics</p>
                     <p class="my-1">University of Southampton</p>
@@ -58,7 +58,7 @@
                         Magnetohydrodynamics &#183; Satellite Systems &#183; Simulation
                         &#183; Kinetic Theory &#183; Electrodynamics</p>
                 </div>
-                <div class="my-4">
+                <div class="my-6">
                     <p class="my-0">2016-2020</p>
                     <p class="my-0">MPhys Physics with Astronomy</p>
                     <p class="my-1">University of Southampton</p>
@@ -68,7 +68,7 @@
                 </div>
                 <p>A-Levels in Computing, Maths, Physics and Photography | Peter Symonds College, Winchester</p>
             </article>
-            <article class="pt-4">
+            <article class="pt-6">
                 <h2>Interests</h2>
                 <ul>
                     <li>I'm a keen runner currently training for half marathon to
@@ -83,21 +83,21 @@
             </article>
         </div>
         <!-- Right Column -->
-        <div class="col-12 col-sm-8 p-4">
+        <div class="sm:col-span-2 p-6">
             {{/* <article>
                 <p>I am a PhD researcher currently working at the University of
                     Southampton. My interests are in problems at the frontier of physics
                     and computer science. I have particularly enjoyed roles working with
                     RF communications, embedded programming, and HPC simulations.</p>
             </article> */}}
-            <article class="col gy-3">
+            <article>
                 <h2>Experience</h2>
-                <div class="px-4">
+                <div class="px-6">
                     <h5>Software Engineer | 2025-Present</h5>
                     <p>Python &#183; Typescript &#183; Swift</p>
                     <p>Software engineering work.</p>
                 </div>
-                <div class="px-4">
+                <div class="px-6">
                     <h5>Communications Engineer | QinetiQ | 2024-2025</h5>
                     <p>MATLAB &#183; Python</p>
                     <p>
@@ -109,7 +109,7 @@
                         multipath propagation.
                     </p>
                 </div>
-                <div class="px-4">
+                <div class="px-6">
                     <h5>PhD Researcher | University of Southampton | 2020-2024</h5>
                     <p>Python &#183; Fortran &#183; Git &#183; C++ &#183; OpenMP</p>
                     <p>
@@ -123,14 +123,14 @@
                         and programming to undergraduate physicists.
                     </p>
                 </div>
-                <div class="px-4">
+                <div class="px-6">
                     <h5>Software Engineering Contractor | Pytri | 2022-present</h5>
                     <p>Typescript &#183; Javascript &#183; SQL &#183; AWS &#183;
                         Python</p>
                     <p>Full-stack software engineer, working on projects in the
                         healthcare and sports industries.</p>
                 </div>
-                <div class="px-4">
+                <div class="px-6">
                     <h5>Startup CTO | The Running Algorithm | 2020</h5>
                     <p>Typescript &#183; Javascript &#183; Firebase &#183; AWS</p>
                     <p>
@@ -147,10 +147,10 @@
                         down when the PhD became too time consuming.
                     </p>
                 </div>
-                <div class="d-print-none">
+                <div class="print:hidden">
 
-                    {{/* <div class="pagebreak d-none d-print-block py-3"></div> */}}
-                    <div class="px-4">
+                    {{/* <div class="pagebreak hidden print:block py-4"></div> */}}
+                    <div class="px-6">
                         <h5>Engineering Intern | <a href="http://in-space.co.uk">In-Space</a> | 2019 &
                             2020
                         </h5>
@@ -172,7 +172,7 @@
                             decades of experience.
                         </p>
                     </div>
-                    <div class="px-4">
+                    <div class="px-6">
                         <h5>Summer Studentship | University of Southampton | 2017 & 2018</h5>
                         <p>Python &#183; IDL &#183; UI &#183; Outreach</p>
                         <p>
@@ -184,8 +184,8 @@
                     </div>
                 </div>
             </article>
-            {{/* <div class="pagebreak py-3 d-none d-print-block"></div> */}}
-            <article class="d-print-none">
+            {{/* <div class="pagebreak py-4 hidden print:block"></div> */}}
+            <article class="print:hidden">
                 <h2>Oral Presentations</h2>
                 <ul>
                     <li>Autumn MIST, London, UK, 2023</li>
@@ -201,7 +201,7 @@
                     <li>Autumn MIST, 2021</li>
                 </ul>
             </article>
-            <article class="d-print-none">
+            <article class="print:hidden">
                 <h2>Teaching</h2>
                 <ul>
                     <li>2021,2022: <a href="https://www.southampton.ac.uk/courses/modules/phys2022#aims">"Physics
@@ -224,16 +224,16 @@
                     </li>
                 </ul>
             </article>
-            {{/* <div class="pagebreak py-3 d-none d-print-block"></div> */}}
+            {{/* <div class="pagebreak py-4 hidden print:block"></div> */}}
             <article>
                 <h2>Publications</h2>
-                <div class="px-4">
+                <div class="px-6">
                     <p><strong>Plank, J.</strong>, & Gingell, I. L. (2023).
                         Intermittency at Earth's bow shock: Measures of turbulence in
                         quasi-parallel and quasi-perpendicular shocks. Physics of Plasmas,
                         30(8). <a href="https://doi.org/10.1063/5.0160439">https://doi.org/10.1063/5.0160439</a></p>
                 </div>
-                <div class="px-4">
+                <div class="px-6">
                     <p>Gingell, I., Schwartz, S. J., Kucharek, H., Farrugia, C. J.,
                         Fryer, L. J., <strong>Plank, J.</strong>, & Trattner, K. J. (2023).
                         Hybrid simulations of the decay of reconnected structures downstream
@@ -241,7 +241,7 @@
                             href="https://doi.org/10.1063/5.0129084">https://doi.org/10.1063/5.0129084</a>
                     </p>
                 </div>
-                <div class="px-4">
+                <div class="px-6">
                     <p>Coxon, J. C., Fear, R. C., Reidy, J. A., Fryer, L. J., &
                         <strong>Plank, J.</strong> (2021). Hot Plasma in the Magnetotail
                         Lobes Shows Characteristics Consistent With Closed Field Lines
@@ -253,7 +253,7 @@
             </article>
             <article>
                 <h2>Media</h2>
-                <div class="px-4">
+                <div class="px-6">
                     <p>Shapiro, M. (2023). A turbulent journey toward understanding
                         space plasma dynamics. Scilight, 2023(35). <a
                             href="https://doi.org/10.1063/10.0020904">https://doi.org/10.1063/10.0020904</a>

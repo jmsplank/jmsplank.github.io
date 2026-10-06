@@ -7,12 +7,12 @@
     {{ partial "head.html" . }}
   </head>
 
-  <body class="pt-3">
-    <div class="container-xl h-100">
-      <main class="row justify-content-center">
+  <body class="pt-4">
+    <div class="mx-auto h-full max-w-6xl px-4">
+      <main class="flex justify-center">
         {{ block "main" . }}{{ end }}
       </main>
-      <footer class="row pt-5 d-print-none">
+      <footer class="pt-12 print:hidden">
         <hr />
         {{ partial "footer.html" .}}
       </footer>

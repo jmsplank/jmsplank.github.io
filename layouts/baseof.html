@@ -8,10 +8,10 @@
   </head>
 
   <body>
-    <div class="container-fluid container-md">
+    <div class="mx-auto max-w-4xl px-4">
       {{ partial "header.html" . }}
-      <main class="row">{{ block "main" . }}{{ end }}</main>
-      <footer class="row pt-5">
+      <main>{{ block "main" . }}{{ end }}</main>
+      <footer class="pt-12">
         <hr />
         {{ partial "footer.html" . }}
       </footer>

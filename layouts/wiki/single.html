@@ -1,17 +1,17 @@
 {{ define "main" }}
 {{ partial "breadcrumb.html" . }}
-<div class="row pb-4">
+<div class="pb-6">
     <h1>{{ .Title }}</h1>
 
     {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
     {{ $dateHuman := .Date | time.Format ":date_long" }}
     <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 </div>
-<div class="row pb-4">
+<div class="pb-6">
     {{ .Content }}
 </div>
-<div class="row pb-4">
-    <ul class="pagination justify-content-between">
+<div class="pb-6">
+    <ul class="flex list-none justify-between p-0">
         {{ partial "prevNext.html" (dict "page" .PrevInSection "text" "&laquo; Prev") }}
         {{ partial "prevNext.html" (dict "page" .NextInSection "text" "Next &raquo;") }}
     </ul>
@@ -21,10 +21,10 @@
 {{ define "partials/prevNext.html" }}
 {{ $page := .page }}
 {{ $text := .text}}
-<li class="page-item">
-    {{ $opts := dict "role" "button" "class" "btn btn-link disabled" "href" "#" "aria-diabled" "true" "tabindex" "-1" }}
+<li>
+    {{ $opts := dict "role" "button" "class" "pointer-events-none inline-block px-3 py-1.5 underline opacity-50" "href" "#" "aria-diabled" "true" "tabindex" "-1" }}
     {{ if $page }}
-    {{ $opts = dict "role" "button" "class" "btn btn-link" "href" $page.RelPermalink }}
+    {{ $opts = dict "role" "button" "class" "inline-block px-3 py-1.5 underline" "href" $page.RelPermalink }}
     {{ end }}
     <a {{- range $k, $v :=$opts }} {{- printf " %s=%q" $k $v | safeHTMLAttr }} {{- end }}>{{
         $text | safeHTML }}</a>
