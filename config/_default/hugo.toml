@@ -11,10 +11,6 @@ author = 'James Plank'
 [markup.goldmark.renderer]
 unsafe = true
 
-# Hugo now blocks raw HTML content files by default; privacy.md uses markup = 'html'
-[security]
-allowContent = ['! ^text/org$']
-
 [security.exec]
 # Only what the build needs (setting this replaces Hugo's default list): the Tailwind CLI and the node it runs on
 allow = ['^node$', '^tailwindcss$']
