@@ -1,12 +1,15 @@
 baseURL = 'https://jamesplank.co.uk/'
-languageCode = 'en-us'
+locale = 'en-GB'
 title = 'James Plank'
 sectionPagesMenu = 'main'
 
 [params]
-    author = 'James Plank'
+author = 'James Plank'
 
 [markup]
-    [markup.goldmark]
-        [markup.goldmark.renderer]
-            unsafe = true
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+# Hugo now blocks raw HTML content files by default; privacy.md uses markup = 'html'
+[security]
+allowContent = ['! ^text/org$']
