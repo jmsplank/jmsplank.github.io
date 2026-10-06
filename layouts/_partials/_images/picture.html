@@ -16,6 +16,6 @@
     {{ $img_webp := $originalImage.Resize (printf "%dx%d webp q100" $nw $nh) }}
     <source media="(min-width:{{$nw}}px)" srcset="{{ $img_webp.Permalink }}" type="image/webp">
     {{end}}
-    <img {{with $lazy}} loading="lazy" class="img-fluid" data-src="{{$originalImage.RelPermalink}}" {{else}}
+    <img {{with $lazy}} loading="lazy" class="h-auto max-w-full" data-src="{{$originalImage.RelPermalink}}" {{else}}
         src="{{$originalImage.RelPermalink}}" {{end}} alt="{{ $caption }}">
 </picture>

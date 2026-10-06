@@ -2,16 +2,17 @@
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+{{- /* Alpine hides this on small screens until the toggle is clicked; without JS it stays visible */ -}}
+<div id="navbarSupportedContent" class="w-full lg:flex lg:w-auto" :class="{ hidden: !open }">
+    <ul class="mb-2 list-none p-0 lg:mb-0 lg:flex lg:gap-2">
         {{- range . }}
-        {{- $attrs := dict "href" .URL "class" "nav-link"}}
+        {{- $attrs := dict "href" .URL "class" "block px-2 py-2 text-dark/70 no-underline hover:text-dark"}}
         {{- if $page.IsMenuCurrent .Menu . }}
-        {{- $attrs = merge $attrs (dict "class" "nav-link active" "aria-current" "page") }}
+        {{- $attrs = merge $attrs (dict "class" "block px-2 py-2 text-dark no-underline" "aria-current" "page") }}
         {{- else if $page.HasMenuCurrent .Menu .}}
-        {{- $attrs = merge $attrs (dict "class" "nav-link ancestor" "aria-current" "true") }}
+        {{- $attrs = merge $attrs (dict "class" "block px-2 py-2 text-dark no-underline" "aria-current" "true") }}
         {{- end }}
-        <li class="nav-item">
+        <li>
             <a {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k $v | safeHTMLAttr }} {{- end }} {{-
                 end -}}>{{ or (T .Identifier) .Name | safeHTML }}</a>
         </li>

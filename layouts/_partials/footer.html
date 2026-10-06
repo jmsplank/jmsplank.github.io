@@ -1,15 +1,7 @@
-<div class="container-sm text-center py-2">
-    <div class="row align-items-center">
-        <div class="col">
-            <span class="align-middle">Copyright {{ $.Site.Params.author }} {{ now.Year }}. All rights reserved.</span>
-        </div>
-        <div class="col">
-            <button type="button" class="btn btn-light">
-                <a href="#" class="termly-display-preferences">Consent Preferences</a>
-            </button>
-            <button type="button" class="btn btn-light">
-                <a href="/privacy/">Privacy Notice</a>
-            </button>
-        </div>
+<div class="grid items-center gap-2 py-2 text-center sm:grid-cols-2">
+    <span>Copyright {{ $.Site.Params.author }} {{ now.Year }}. All rights reserved.</span>
+    <div class="flex flex-wrap justify-center gap-2">
+        <a href="#" class="termly-display-preferences rounded border border-dark/20 px-3 py-1.5 no-underline">Consent Preferences</a>
+        <a href="/privacy/" class="rounded border border-dark/20 px-3 py-1.5 no-underline">Privacy Notice</a>
     </div>
 </div>

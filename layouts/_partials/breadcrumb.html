@@ -1,8 +1,8 @@
-<nav class="breadcrumb">
-    <ol class="breadcrumb">
+<nav>
+    <ol class="m-0 flex list-none flex-wrap p-0 py-2">
         {{ range .Ancestors.Reverse }}
-        <li class="breadcrumb-item"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        <li class="not-last:after:px-2 not-last:after:text-dark/50 not-last:after:content-['/']"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
-        <li class="breadcrumb-item active" aria-current="page"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        <li aria-current="page"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
     </ol>
 </nav>

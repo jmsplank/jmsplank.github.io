@@ -1,10 +1,10 @@
 {{ define "main" }}
 {{ partial "breadcrumb.html" . }}
 <h1>{{ .Title }}</h1>
-<div class="container-md">
-    <ul class="list-group list-group-flush">
+<div>
+    <ul class="list-none divide-y divide-dark/20 p-0">
         {{ range .RegularPages }}
-        <li class="list-group-item">
+        <li class="py-2">
             <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
         </li>
         {{ end }}
