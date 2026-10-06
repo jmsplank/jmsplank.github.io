@@ -1,22 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
 
-<!-- Accept cookies -->
-{{ if eq (getenv "HUGO_ENV") "prod" }}
-<script type="text/javascript"
-    src="https://app.termly.io/resource-blocker/fc316427-5e99-4c01-aae5-519cb16b7e05?autoBlock=on"></script>
-{{ end }}
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLDCSBSM6T"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-NLDCSBSM6T');
-</script>
-
 {{/* Alpine */}}
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.17.4/dist/cdn.min.js"
     integrity="sha384-5/joNqFnRyVWzXp99bHot6RHG+EksGp+USSgZwPar7T9SD9PKKER37n/8bXBAZGd"
