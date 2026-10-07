@@ -10,26 +10,72 @@
     --color-success: #40a02b;
     --color-warning: #df8e1d;
     --color-danger: #d20f39;
-    --font-sans: et-book, sans-serif;
-    --font-heading: et-book-bold, sans-serif;
+    --font-sans: Libron, serif;
+    --font-heading: 'NV Legible Next', sans-serif;
 }
 
 @font-face {
-    font-family: et-book;
-    src: url('/fonts/et-book-roman-line-figures.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Libron';
+    src: url('/fonts/Libron_R-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: et-book;
-    src: url('/fonts/et-book-bold-line-figures.woff') format('woff');
-    font-weight: bold;
+    font-family: 'Libron';
+    src: url('/fonts/Libron_R-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: et-book-bold;
-    src: url('/fonts/et-book-bold-line-figures.woff') format('woff');
-    font-weight: bold;
+    font-family: 'Libron';
+    src: url('/fonts/Libron_R-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Libron';
+    src: url('/fonts/Libron_R-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NV Legible Next';
+    src: url('/fonts/NV_Legible_Next_R-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NV Legible Next';
+    src: url('/fonts/NV_Legible_Next_R-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NV Legible Next';
+    src: url('/fonts/NV_Legible_Next_R-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NV Legible Next';
+    src: url('/fonts/NV_Legible_Next_R-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
 }
 
 @layer base {
@@ -47,7 +93,7 @@
 
     body { @apply bg-light text-dark pt-28; }
     /* Preflight strips default element styling; restore what the Markdown content needs */
-    h1, h2, h3, h4, h5, h6 { @apply font-heading mb-2 leading-tight font-medium; }
+    h1, h2, h3, h4, h5, h6 { @apply font-heading mb-2 leading-tight font-bold; }
     h1 { @apply text-[2.5rem]; }
     h2 { @apply text-[2rem]; }
     h3 { @apply text-[1.75rem]; }
