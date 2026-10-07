@@ -1,0 +1,8 @@
+{{ with .Page.Resources.Get (.Get "src") }}
+<figure class="mx-auto my-10 grid w-fit max-w-full">
+  {{ partial "_images/picture.html" (dict "src" . "alt" ($.Get "alt")) }}
+  {{ partial "_images/caption.html" . }}
+</figure>
+{{ else }}
+{{ errorf "photo shortcode: %q not found in %s" (.Get "src") .Page.File.Path }}
+{{ end }}

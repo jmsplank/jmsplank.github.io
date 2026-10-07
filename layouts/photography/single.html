@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ partial "breadcrumb.html" . }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ range .Resources.ByType "image" }}
+<figure class="mx-auto my-10 grid w-fit max-w-full">
+  {{ partial "_images/picture.html" (dict "src" . "alt" (.Params.alt | default "")) }}
+  {{ partial "_images/caption.html" . }}
+</figure>
+{{ end }}
+{{ end }}

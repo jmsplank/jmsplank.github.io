@@ -8,15 +8,13 @@
         </div>
     </div>
     <div class="pb-6">
-        <h2>Sections</h2>
         {{ if .Sections }}
+        <h2>Sections</h2>
         <div class="p-6">
             {{ range .Sections }}
             <a href="{{ .RelPermalink }}" class="mr-4 text-[1.75rem]">{{ .LinkTitle }}</a>
             {{ end }}
         </div>
-        {{ else }}
-        <p>Nothing here...</p>
         {{ end }}
     </div>
     <div>

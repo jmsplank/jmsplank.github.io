@@ -1,0 +1,38 @@
+{{- /* EXIF details from the original file (Hugo doesn't copy EXIF into processed images). Param: image resource. Returns a dict, or nil without EXIF. */ -}}
+{{- $t := .Meta.Exif -}}
+{{- $out := false -}}
+{{- if $t -}}
+{{- /* EXIF rationals come through as "num/den" (e.g. 14/5); turn them into floats */ -}}
+{{- $num := dict -}}
+{{- range $k := slice "FNumber" "ExposureTime" "FocalLength" "ISO" -}}
+  {{- with index $t $k -}}
+    {{- $s := printf "%v" . -}}
+    {{- if strings.Contains $s "/" -}}
+      {{- $p := split $s "/" -}}
+      {{- $num = merge $num (dict $k (div (float (index $p 0)) (float (index $p 1)))) -}}
+    {{- else -}}
+      {{- $num = merge $num (dict $k (float $s)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* "FUJIFILM X-T3" -> "Fuji X-T3"; other makes are shown title-cased before the model */ -}}
+{{- $camera := $t.Model | default "" -}}
+{{- with $t.Make -}}
+  {{- $make := . | lower | replaceRE `\s.*$` "" | replaceRE `^fujifilm$` "fuji" | title -}}
+  {{- if not (strings.HasPrefix (lower $camera) (lower $make)) }}{{ $camera = printf "%s %s" $make $camera }}{{ end -}}
+{{- end -}}
+{{- /* drop the maker from the lens name: "Fujifilm Fujinon XF18-55mm..." -> "XF18-55mm..." */ -}}
+{{- $lens := $t.LensModel | default "" | replaceRE `(?i)^(fujifilm\s+)?(fujinon\s+)?` "" -}}
+
+{{- $shot := slice -}}
+{{- with $num.FocalLength }}{{ $shot = $shot | append (printf "%gmm" .) }}{{ end -}}
+{{- with $num.FNumber }}{{ $shot = $shot | append (printf "f/%.1f" .) }}{{ end -}}
+{{- $expo := slice -}}
+{{- with $num.ExposureTime -}}
+  {{- $expo = $expo | append (cond (lt . 1.0) (printf "1/%gs" (math.Round (div 1.0 .))) (printf "%gs" .)) -}}
+{{- end -}}
+{{- with $num.ISO }}{{ $expo = $expo | append (printf "ISO %g" .) }}{{ end -}}
+{{- $out = dict "camera" $camera "lens" $lens "shot" (delimit $shot " ") "expo" (delimit $expo " ") -}}
+{{- end -}}
+{{- return $out -}}

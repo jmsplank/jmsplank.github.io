@@ -33,6 +33,18 @@
 }
 
 @layer base {
+    /* Catppuccin Frappé, enabled per page with `darkMode = true` in front matter. Redefining the theme variables re-themes everything, navbar included. */
+    .frappe {
+        --color-light: #303446;
+        --color-dark: #c6d0f5;
+        --color-primary: #b5bfe2;
+        --color-secondary: #ea999c;
+        --color-info: #ef9f76;
+        --color-success: #a6d189;
+        --color-warning: #e5c890;
+        --color-danger: #e78284;
+    }
+
     body { @apply bg-light text-dark pt-28; }
     /* Preflight strips default element styling; restore what the Markdown content needs */
     h1, h2, h3, h4, h5, h6 { @apply font-heading mb-2 leading-tight font-medium; }

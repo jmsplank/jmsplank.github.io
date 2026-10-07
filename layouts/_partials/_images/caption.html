@@ -1,0 +1,14 @@
+{{- /* Photo caption from EXIF: camera and lens on the left, exposure details on the right. Param: image resource */ -}}
+{{ with partial "_images/exif.html" . }}
+{{- /* w-0 min-w-full: the caption takes the image's width instead of widening the figure */ -}}
+<figcaption class="mt-4 flex w-0 min-w-full justify-between gap-4 text-sm">
+  <div>
+    <div class="text-base font-bold">{{ .camera }}</div>
+    <div class="text-dark/60">{{ .lens }}</div>
+  </div>
+  <div class="text-right">
+    <div class="text-base font-bold">{{ .shot }}</div>
+    <div class="text-dark/60">{{ .expo }}</div>
+  </div>
+</figcaption>
+{{ end }}
