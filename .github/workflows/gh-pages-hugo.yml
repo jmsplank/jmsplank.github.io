@@ -44,6 +44,12 @@ jobs:
           node-version: 24
           cache: "npm"
       - run: npm ci
+      - name: Cache processed images
+        uses: actions/cache@v5
+        with:
+          path: resources/_gen
+          key: hugo-resources-${{ hashFiles('content/**/*.jpg', 'layouts/_partials/_images/**') }}
+          restore-keys: hugo-resources-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6

@@ -1,21 +1,28 @@
-{{ $originalImage := .src }}
-{{ $class := .class }}
-{{ $lazy := .lazy | default true }}
-{{ $caption := .alt | default "" }}
+{{- /*
+  Responsive image: AVIF sources with same-size JPEG fallbacks, plus a tiny inline placeholder.
+  Params: src (image resource, required), alt, sizes, class
+*/ -}}
+{{ $img := .src }}
+{{ $alt := .alt | default "" }}
+{{ $sizes := .sizes | default "(min-width: 896px) 864px, 100vw" }}
+{{ $class := .class | default "mx-auto h-auto max-h-[85vh] w-auto max-w-full rounded-xl" }}
 
-{{ $w := float $originalImage.Width }}
-{{ $h := float $originalImage.Height }}
-{{ $aspectRatio := div $w $h }}
-
-{{ $media_query_widths := slice 1400 1200 992 768 576 480 360}}
-
+{{ $max := int (math.Min 2400 $img.Width) }}
+{{ $avif := slice }}{{ $jpg := slice }}{{ $fallback := false }}
+{{ range uniq (slice 800 1600 $max) }}
+  {{ if le . $max }}
+    {{ $a := $img.Resize (printf "%dx avif" .) }}
+    {{ $j := $img.Resize (printf "%dx jpg" .) }}
+    {{ $avif = $avif | append (printf "%s %dw" $a.RelPermalink .) }}
+    {{ $jpg = $jpg | append (printf "%s %dw" $j.RelPermalink .) }}
+    {{ $fallback = $j }}
+  {{ end }}
+{{ end }}
+{{ $lqip := $img.Resize "32x jpg q30" }}
 <picture>
-    {{ range $media_query_widths }}
-    {{ $nw := . }}
-    {{ $nh := div $nw $aspectRatio | int }}
-    {{ $img_webp := $originalImage.Resize (printf "%dx%d webp q100" $nw $nh) }}
-    <source media="(min-width:{{$nw}}px)" srcset="{{ $img_webp.Permalink }}" type="image/webp">
-    {{end}}
-    <img {{with $lazy}} loading="lazy" class="h-auto max-w-full" data-src="{{$originalImage.RelPermalink}}" {{else}}
-        src="{{$originalImage.RelPermalink}}" {{end}} alt="{{ $caption }}">
+  <source type="image/avif" srcset="{{ delimit $avif ", " }}" sizes="{{ $sizes }}">
+  <img src="{{ $fallback.RelPermalink }}" srcset="{{ delimit $jpg ", " }}" sizes="{{ $sizes }}"
+    width="{{ $fallback.Width }}" height="{{ $fallback.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async"
+    class="{{ $class }}"
+    style="{{ printf "background:url(data:image/jpeg;base64,%s) center/cover" ($lqip.Content | base64Encode) | safeCSS }}">
 </picture>
