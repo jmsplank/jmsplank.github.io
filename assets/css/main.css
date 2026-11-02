@@ -104,6 +104,7 @@
     ul { @apply list-disc pl-8; }
     ol { @apply list-decimal pl-8; }
     a { @apply text-primary underline; }
+    p { a { color: #155383; }}
     hr { @apply my-4 border-t border-dark/25; }
 }
 @media print {
